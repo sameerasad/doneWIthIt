@@ -1,37 +1,32 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View, Button, Alert, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  Alert,
+  Image,
+  TouchableHighlight,
+} from "react-native";
+import { useDimensions } from "@react-native-community/hooks";
 
 export default function App() {
+  console.log(useDimensions);
   return (
-    <View style={styles.container}>
-      <Text>HELLO WORLD!</Text>
-
-      <StatusBar style="auto" />
-      <Button
-        title="click here"
-        onPress={() =>
-          Alert.alert("TITLE", "MESSAGE", [
-            { text: "yes", onPress: () => console.log("YES PRESSED") },
-            { text: "no", onPress: () => console.log("NO PRESSED") },
-          ])
-        }
-      />
-      <Image
-        source={{
-          height: "300",
-          uri: "https://picsum.photos/200/300",
-        }}
-      />
+    <View
+      styles={{ width: "100%", height: "30%", backgroundColor: "dodgerblue" }}
+    >
+      Hello wORLD!
     </View>
   );
 }
 
-const styles = StyleSheet.create({
+/*const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "orange",
+    flex: "1",
     alignItems: "center",
     justifyContent: "center",
+    backgroundColor: "dodgerblue",
   },
-});
+});*/
