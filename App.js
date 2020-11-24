@@ -9,24 +9,33 @@ import {
   Image,
   TouchableHighlight,
 } from "react-native";
-import { useDimensions } from "@react-native-community/hooks";
+import {
+  useDimensions,
+  useDeviceOrientation,
+} from "@react-native-community/hooks";
 
 export default function App() {
-  console.log(useDimensions);
+  console.log(useDeviceOrientation()); //landscape true and portrait false
+  const { landscape } = useDeviceOrientation(); //destructing to get just landscape
   return (
     <View
-      styles={{ width: "100%", height: "30%", backgroundColor: "dodgerblue" }}
+      style={styles.container}
+      style={{
+        width: "100%",
+        height: landscape ? "30%" : "100%",
+        backgroundColor: "dodgerblue",
+      }}
     >
-      Hello wORLD!
+      Hello WORLD!
     </View>
   );
 }
 
-/*const styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: "1",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "dodgerblue",
+    backgroundColor: "#fff",
   },
-});*/
+});
