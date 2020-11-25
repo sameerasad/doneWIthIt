@@ -4,28 +4,25 @@ import { View, Text } from "react-native";
 
 export default function App() {
   return (
-    <View style={{ flex: 1, backgroundColor: "white" }}>
+    <View
+      style={{
+        flex: "1",
+        backgroundColor: "white",
+      }}
+    >
       <View
         style={{
-          flex: 0.3,
+          width: "100%",
+          height: "100%",
           backgroundColor: "dodgerblue",
-          alignItems: "center",
         }}
-      >
-        <Text
-          style={{
-            paddingTop: "20px",
-            flex: 1,
-
-            backgroundColor: "red",
-          }}
-        >
-          {" "}
-          hello world
-        </Text>
-      </View>
-      <View style={{ flex: 1, backgroundColor: "orange" }} />
-      <View style={{ flex: 1, backgroundColor: "tomato" }} />
+      ></View>
+      <View
+        style={{ width: "100%", height: "100%", backgroundColor: "orange" }}
+      />
+      <View
+        style={{ width: "100%", height: "100%", backgroundColor: "tomato" }}
+      />
     </View>
   );
 }
