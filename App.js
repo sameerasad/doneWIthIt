@@ -8,7 +8,6 @@ export default function App() {
       style={{
         flex: "1",
         backgroundColor: "white",
-        flexDirection: "row-reverse",
       }}
     >
       <View
